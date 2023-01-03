@@ -10,19 +10,19 @@ fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&prod
         
               
 }),
-
-
-
 )}
 
 fetchAllLipstick()
 
-// fetch("http://localhost:3000/drinks/1") 
-// .then(res => res.json())
-// .then(drinkOne => {
-// const detailImage = document.getElementById("detail-image")
-// detailImage.src = drinkOne.image 
-// })
+/*Deliverable #2: submit event */
+const lipstickForm = document.querySelector(".lipstick-form")
+lipstickForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const emailValue = document.getElementById('email')
+    alert(`${emailValue.value} has been added to the email list!`);
+})
+
+
 
 
 
