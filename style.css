@@ -1,0 +1,90 @@
+body {
+    background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.container {
+    margin: 75px 150px;
+    padding: 50px 150px;
+    border: solid 1px brown;
+}
+
+#right-side {
+    margin-left:auto;
+}
+
+.icon {
+    width:75px;
+    height:auto;
+    vertical-align: middle;
+}
+#amount {
+    font-size: 25px;
+}
+
+.cocktail-header {
+    align-items: center;
+    color: blueviolet;
+}
+
+#cocktail-list {
+    display:flex;
+    justify-content: center;
+}
+
+#cocktail-list img {
+    width: 100px;
+    height: auto;
+    margin: 7px;
+}
+
+#cocktail-list img:hover {
+    filter: drop-shadow(0 0 0.75rem white)
+}
+
+#cocktail-info {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.top {
+    display: block;
+    margin: 0;
+}
+
+
+#cocktail-info img {
+    height: auto;
+    margin: 7px;
+    filter: drop-shadow(0 0 1em #C87D4C)
+}
+
+#cocktail-info div {
+    width: 500px;
+    margin-left: 20px;
+}
+
+#cocktail-info div p {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+form {
+    width:200px;
+}
+
+button {
+    border: 0;
+    width:200px;
+    color: black;
+    background: white; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+
