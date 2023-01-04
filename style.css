@@ -39,6 +39,7 @@ body {
     margin: 7px;
 }
 
+/*Deliverable #3: Hover */
 #lipstick-list img:hover {
     filter: drop-shadow(0 0 0.75rem white)
 }
