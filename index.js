@@ -1,7 +1,8 @@
 function fetchAllLipstick () {
-fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick") 
+fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick") 
 .then(res => res.json())
 .then(lipsticks => 
+    // if (lipsticks.id > 1043) {}
     lipsticks.forEach(lipstick => {
         const lipstickList = document.getElementById("lipstick-list")
         const lipstickImages = document.createElement("img")
