@@ -7,22 +7,23 @@ const lipstickDescription = document.querySelector('#description');
 const likedButton = document.querySelector('#like-btn');
 
 //function fetchAllLipstick () {
-fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick") 
+fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
     .then(res => res.json())
-    .then(lipsticks => 
+    .then(lipsticks =>
         forEachLoop(lipsticks)
 )
 
 function forEachLoop(lipstick) {
     lipstick.forEach(lipstick => {
-        if(lipstick.price > 10 && lipstick.price < 15) {
+        if(lipstick.price > 10 && lipstick.price < 12) {
         const lipstickImages = document.createElement("img")
         lipstickImages.src = lipstick.image_link
         lipstickList.appendChild(lipstickImages)
-        
+
         lipstickImages.addEventListener('click', () => {
             lipstickDetails(lipstick)
-        })}      
+            })
+        }
     })
 }
 
@@ -32,6 +33,12 @@ function lipstickDetails(lipstick) {
     lipstickTitle.textContent = lipstick.name
     lipstickPrice.textContent = `$${lipstick.price}`
     lipstickDescription.textContent = lipstick.description
+
+            // CLICK liked button to open new tab
+            likedButton.addEventListener('click', () => {
+                window.open(lipstick.product_link)
+                console.log(lipstick.product_link)
+                })
 }
 
 // SUBMIT email alert
