@@ -23,27 +23,27 @@ body {
     font-size: 25px;
 }
 
-.cocktail-header {
+.lipstick-header {
     align-items: center;
     color: blueviolet;
 }
 
-#cocktail-list {
+#lipstick-list {
     display:flex;
     justify-content: center;
 }
 
-#cocktail-list img {
+#lipstick-list img {
     width: 100px;
     height: auto;
     margin: 7px;
 }
 
-#cocktail-list img:hover {
+#lipstick-list img:hover {
     filter: drop-shadow(0 0 0.75rem white)
 }
 
-#cocktail-info {
+#lipstick-info {
     display: flex;
     height: 400px;
     justify-content: center;
@@ -56,18 +56,18 @@ body {
 }
 
 
-#cocktail-info img {
+#lipstick-info img {
     height: auto;
     margin: 7px;
     filter: drop-shadow(0 0 1em #C87D4C)
 }
 
-#cocktail-info div {
+#lipstick-info div {
     width: 500px;
     margin-left: 20px;
 }
 
-#cocktail-info div p {
+#lipstick-info div p {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
