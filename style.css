@@ -91,34 +91,16 @@ button {
     max-width: 300px;
 }
 
-#nav-lipstick {
-  padding: 20px 0;
-  margin: 0;
+
+.row:after {
+    content:"";
+    display:table;
+    clear:both;
 }
 
-.nav-bar {
-  padding: 0;
-}
-
-.nav-bar li {
-  display: inline;
-  list-style: none;
-  margin: 0;
-  line-height: 50px;
-  margin-left: 10px;
-}
-
-.float-container {
-    border: 3px solid #fff;
-    padding:20px
-}
-
-.float-child {
-    width:50%;
-    float: left;
-    padding: 20px;
-    border: 2px solid red;
-    display: flex;
+.col-6 {
+    float:left;
+    width: 50%;    
 
 }
 
