@@ -1,14 +1,23 @@
 <html>
     <head>
-        <title>The vagina of the face</title>
+        <title>VOTF LIPS</title>
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Gothic&display=swap" rel="stylesheet">
         <script defer src="./index.js"></script>
+
     </head>
     <body>
-        <h1 class="lipstick-header">lipstick HOUR</h1>
+        <!-- <nav id="nav-lipstick" class="d-flex justify-content-between">
+            <img src="./lips-logo copy.png" class="logo d-block d-md-none">
+        <ul class="nav-bar">
+            <li>Blush</li>
+            <li>Fondation</li>
+            <li>Eyeshadow</li>
+        </ul>
+        </nav> -->
+        <h1 class="lipstick-header">VOTF LIPS</h1>
         <div class="container">
         <div id="top">
         </div>
@@ -20,10 +29,10 @@
         <div id="lipstick-info">
             <img id="detail-image" src="" />
             <div>
-                <h1 id="title">Name of drink</h1>
-                <h3 id="price">$$$</h5>
+                <h1 id="title"></h1>
+                <h3 id="price"></h5>
                 <p id="description">
-                    Description
+                    
                 </p>
                 <button id="like-btn">Loved it!</button>
                 
@@ -33,25 +42,37 @@
 
 
 
-<div class="container">
-    <div id="lipstick-info">
-        <div>
-        <h1 id="title">Subscribe to our newsletter</h1>
-        <form action="/submit" class="lipstick-form">
-            <label for="email">Enter your email: </label>
-            <input type="email" name="email" id="email" required>
-            <input type="submit" value="Subscribe!" class="email-submit">
-        </form>
-        </div>
-    </div>
-</div>
-
 
         
-                
+   
+            <img class="subscribe-lips" src="./lipspop.png">
             
+            
+        
+            <h1 id="title">Add your own lipstick to our store!</h1>
+                <form class="add-lip-form" action="/submit">
 
-    
-    </body>
+                    <label for="name"></label>
+                    <input placeholder="Lipstick Name" type="text" name="name" id="add-lip-name" required>
+                    <label for="price"></label>   
+                    <input placeholder="Price" type="text" name="add-price" id="add-price" required>
+                    <label for="image"></label>   
+                    <input placeholder="Image URL" type="text" name="add-image-url" id="add-image-url" required>
+                    <label for="description"></label>   
+                    <input placeholder="Description" type="text" name="add-description" id="add-description" required>
+                    <label for="webpage"></label>   
+                    <input placeholder="Webpage URL" type="text" name="add-webpage-url" id="add-webpage-url" required>
+                    <input type="submit" value="Add!">
+                </form>
+ 
+               
+ <h1 id="title">Subscribe to our newsletter</h1>
+    <form action="/submit" class="lipstick-form">
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required>
+        <input type="submit" value="Subscribe!" class="email-submit">
+    </form>
+
+</body>
 
 </html>
