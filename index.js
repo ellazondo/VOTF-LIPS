@@ -10,21 +10,21 @@ const likedButton = document.querySelector('#like-btn');
 fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
     .then(res => res.json())
     .then(lipsticks =>
-        forEachLoop(lipsticks)
-)
+        lipsticks.forEach(lipstick => {
+            renderProduct(lipstick);
+        })
+    );
 
-function forEachLoop(lipstick) {
-    lipstick.forEach(lipstick => {
-        if(lipstick.price > 10 && lipstick.price < 12) {
+function renderProduct(lipstick) {
+        if(lipstick.price > 11 && lipstick.price < 12) {
         const lipstickImages = document.createElement("img")
         lipstickImages.src = lipstick.image_link
         lipstickList.appendChild(lipstickImages)
 
         lipstickImages.addEventListener('click', () => {
             lipstickDetails(lipstick)
-            })
-        }
-    })
+        })
+    }
 }
 
 // populate detailed descriptions for product
@@ -49,32 +49,9 @@ lipstickForm.addEventListener('submit', (event) => {
     alert(`${emailValue.value} has been added to the email list!`);
 })
 
-function uponLoad () {
-    fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
-    .then(res => res.json())
-    .then(lipsticks => {
-        detailImage.src = lipsticks[1].image_link
-        lipstickTitle.textContent = lipsticks[1].name
-        lipstickPrice.textContent = lipsticks[1].price
-        lipstickDescription.textContent = lipsticks[1].description
-    })
-    
-}
-
-uponLoad()
-
-const addLiptick = document.querySelector(".add-lip-form")
-addLiptick.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const addedLipName = document.querySelector("#add-lip-name")
-    const addedLipPrice = document.querySelector("#add-price")
-    const addImageUrl = document.getElementById('add-image-url')
-    const addDescription = document.getElementById('add-description')
-    const lipstickImages = document.createElement("img")
-    lipstickImages.src = addImageUrl.value
-    lipstickList.appendChild(lipstickImages)
-    detailImage.src = addImageUrl.value
-    lipstickTitle.textContent = addedLipName.value
-    lipstickPrice.textContent = addedLipPrice.value
-    lipstickDescription.textContent = addDescription.value
+// loads first product
+fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
+.then(res => res.json())
+.then(lipsticks => {
+    lipstickDetails(lipsticks[1]);
 })
