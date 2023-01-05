@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);;
+    background: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
     color: white;
     font-family: 'Bebas Neue', cursive;
 }
@@ -85,6 +85,23 @@ button {
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Bebas Neue', cursive;
+}
+
+.subscribe-lips {
+    max-width: 300px;
+}
+
+
+.row:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.col-6 {
+    float:left;
+    width: 50%;    
+
 }
 
 
