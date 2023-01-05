@@ -1,7 +1,15 @@
 body {
     background: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
-    color: white;
+    color: black;
     font-family: 'Bebas Neue', cursive;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    border:5px solid #556
+    
 }
 
 .container {
@@ -26,11 +34,14 @@ body {
 .lipstick-header {
     align-items: center;
     color: blueviolet;
+    text-align: center;
+    
 }
 
 #lipstick-list {
     display:flex;
     justify-content: center;
+    
 }
 
 #lipstick-list img {
@@ -41,7 +52,7 @@ body {
 
 /*Deliverable #3: Hover */
 #lipstick-list img:hover {
-    filter: drop-shadow(0 0 0.75rem white)
+    filter: drop-shadow(0 0 0.75rem purple)
 }
 
 #lipstick-info {
@@ -49,7 +60,16 @@ body {
     height: 400px;
     justify-content: center;
     margin-top: 25px;
+    color:black;
 }
+
+
+
+p {
+    color: black;
+}
+
+
 
 .top {
     display: block;
@@ -66,15 +86,24 @@ body {
 #lipstick-info div {
     width: 500px;
     margin-left: 20px;
+
+    
 }
+
+ {
+
+}
+
 
 #lipstick-info div p {
     font-family: 'Nanum Gothic', sans-serif;
+    
 }
 
 form {
     width:200px;
 }
+
 
 button {
     border: 0;
@@ -89,6 +118,7 @@ button {
 
 .subscribe-lips {
     max-width: 300px;
+    color:black;
 }
 
 
@@ -96,13 +126,33 @@ button {
     content:"";
     display:table;
     clear:both;
+    
 }
 
 .col-6 {
     float:left;
-    width: 50%;    
+    width: 50%; 
+    color:black;   
 
 }
+
+h1 {
+    color:aliceblue;
+    font-family: 'Bebas, sans-serif';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.lipstick-form {
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+    display: block;
+    width: auto;
+
+}
+
 
 
 
