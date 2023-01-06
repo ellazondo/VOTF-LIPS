@@ -2,13 +2,18 @@ body {
     background: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
     color: black;
     font-family: 'Bebas Neue', cursive;
+
 }
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left:auto;
+    margin-right:auto;
     max-width: 50%;
+    position: relative;
+    top: 50px;
     border:5px solid #556
+
+    
     
 }
 
@@ -16,16 +21,20 @@ img {
     margin: 75px 150px;
     padding: 50px 150px;
     border: solid 1px brown;
+    
 }
 
 #right-side {
     margin-left:auto;
+    
 }
 
 .icon {
     width:75px;
     height:auto;
     vertical-align: middle;
+    margin-right: 50px;
+    margin-top: -10px;
 }
 #amount {
     font-size: 25px;
@@ -38,9 +47,11 @@ img {
     
 }
 
+
 #lipstick-list {
     display:flex;
     justify-content: center;
+    
     
 }
 
@@ -49,6 +60,8 @@ img {
     height: auto;
     margin: 7px;
 }
+
+
 
 /*Deliverable #3: Hover */
 #lipstick-list img:hover {
@@ -98,6 +111,9 @@ p {
 
 form {
     width:200px;
+    width:300px;
+    max-height:371px;
+    transition:max-height 400ms ease-in-out;
 }
 
 
@@ -114,7 +130,11 @@ button {
 
 .subscribe-lips {
     max-width: 300px;
+    margin-top: 50px auto;
+    text-align: center;
     color:black;
+
+
 }
 
 
@@ -133,45 +153,62 @@ button {
 }
 
 h1 {
-    color:aliceblue;
+    color:black;
     font-family: 'Bebas, sans-serif';
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    
 }
 .lipstick-form {
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: 100px;
+    margin-top: 20px;
     text-align: center;
     display: block;
     width: auto;
+    background-color: purple;
+    
 
 }
 
-/* .float {
-  margin-left: 200px;
-} */
+title {
+    color:black !important;
 
+    
+}
 .top-nav ul {
- float: right;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.top-nav li {
-   display: inline;
-  padding-left: 10px;
-  padding-right: 10px;
-
-}
-
-.top-nav {
-  overflow:hidden;
-}
-
+    float: right;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+   }
+   
+   .top-nav li {
+      display: inline;
+     padding-left: 10px;
+     padding-right: 10px;
+   
+   }
+   
+   .top-nav {
+     overflow:hidden;
+   }
+   
+   /* allows us to animate a collapsed element appearing after a click  */
+   .collapsed {
+     max-height: 0;
+     overflow: hidden;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 
