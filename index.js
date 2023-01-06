@@ -5,6 +5,7 @@ const lipstickTitle = document.querySelector('#title');
 const lipstickPrice = document.querySelector('#price');
 const lipstickDescription = document.querySelector('#description');
 const likedButton = document.querySelector('#like-btn');
+const addShadeForm = document.querySelector(".add-shade-form")
 
 
 fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
@@ -23,6 +24,8 @@ function renderProduct(lipstick) {
 
         lipstickImages.addEventListener('click', () => {
             lipstickDetails(lipstick)
+            //CALL RENDERSHADECLICK FUNCTION 
+            renderShadeClick(lipstick)
         })
     }
 }
@@ -56,6 +59,27 @@ fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=li
     lipstickDetails(lipsticks[1]);
 })
 
+//TOGGLE THE UGLY FORM
+const toggleFormBtn = document.querySelector('#toggleForm');
+// hide and show the form when toggle buton is clicked
+toggleFormBtn.addEventListener('click', (e) => {
+  const formHidden = addShadeForm.classList.toggle('collapsed')
+  toggleFormBtn.textContent = formHidden ?  "New Shade" : "Hide Form";
+});
+
+
+addShadeForm.classList.toggle('collapsed')
+
+//HIDE FORM WHEN IT'S VISIBLE
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (!addShadeForm.classList.contains('collapsed')) {
+      addShadeForm.classList.add('collapsed')
+      toggleFormBtn.textContent = "New Shade";
+    };
+  }
+})
+
 
 //FETCHING FOR SHADES
 fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
@@ -84,7 +108,7 @@ fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=li
     }
 
     //SHADE FORM EVENT LISTENER - USER ADDS OWN SHADE
-    const addShadeForm = document.querySelector(".add-shade-form")
+    
     addShadeForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const addedShadeName = document.querySelector("#add-shade-name")
