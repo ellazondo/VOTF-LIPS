@@ -103,10 +103,6 @@ p {
     
 }
 
- {
-
-}
-
 
 #lipstick-info div p {
     font-family: 'Nanum Gothic', sans-serif;
@@ -115,6 +111,9 @@ p {
 
 form {
     width:200px;
+    width:300px;
+    max-height:371px;
+    transition:max-height 400ms ease-in-out;
 }
 
 
@@ -175,8 +174,41 @@ h1 {
 
 title {
     color:black !important;
-}
 
+    
+}
+.top-nav ul {
+    float: right;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+   }
+   
+   .top-nav li {
+      display: inline;
+     padding-left: 10px;
+     padding-right: 10px;
+   
+   }
+   
+   .top-nav {
+     overflow:hidden;
+   }
+   
+   /* allows us to animate a collapsed element appearing after a click  */
+   .collapsed {
+     max-height: 0;
+     overflow: hidden;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 
