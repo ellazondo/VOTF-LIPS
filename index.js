@@ -55,3 +55,45 @@ fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=li
 .then(lipsticks => {
     lipstickDetails(lipsticks[1]);
 })
+
+
+//FETCHING FOR SHADES
+fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_category=lipstick&product_type=lipstick")
+    .then(res => res.json())
+    .then(lipsticks => {
+        lipsticks[1].product_colors.forEach(shade => {
+        const swatchArea = document.createElement('li')
+        swatchArea.textContent = shade.colour_name
+        swatchArea.style = `color: ${shade.hex_value}`
+        const productSingleColors = document.querySelector(".product_single_colors") 
+        productSingleColors.appendChild(swatchArea)
+    })     
+    })
+    
+//RENDER SHADES WHEN CLICKED ABOVE
+        function renderShadeClick(lipstick) {
+            const productSingleColors = document.querySelector(".product_single_colors") 
+            productSingleColors.innerHTML= ""; 
+            lipstick.product_colors.forEach(shade => {
+            const swatchArea = document.createElement('li')
+            swatchArea.textContent = shade.colour_name
+            swatchArea.style = `color: ${shade.hex_value}`
+            const productSingleColors = document.querySelector(".product_single_colors") 
+            productSingleColors.appendChild(swatchArea);
+    })  
+    }
+
+    //SHADE FORM EVENT LISTENER - USER ADDS OWN SHADE
+    const addShadeForm = document.querySelector(".add-shade-form")
+    addShadeForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const addedShadeName = document.querySelector("#add-shade-name")
+        const addedShadeColor = document.querySelector("#add-color")
+        const swatchArea = document.createElement('li')
+        swatchArea.textContent = addedShadeName.value
+        swatchArea.style = `color: ${addedShadeColor.value}`
+        const productSingleColors = document.querySelector(".product_single_colors") 
+        productSingleColors.appendChild(swatchArea)
+
+
+    })
