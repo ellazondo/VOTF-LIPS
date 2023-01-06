@@ -9,16 +9,9 @@
 
     </head>
     <body>
-        <!-- <nav id="nav-lipstick" class="d-flex justify-content-between">
-            <img src="./lips-logo copy.png" class="logo d-block d-md-none">
-        <ul class="nav-bar">
-            <li>Blush</li>
-            <li>Fondation</li>
-            <li>Eyeshadow</li>
-        </ul>
-        </nav> -->
-        
+
         <img src = "image.png" class ="center">
+
         <div class="container">
         <div id="top">
         </div>
@@ -40,6 +33,15 @@
                 <button id="like-btn">Loved it!</button>
                 
             </div>
+<!-- adding shades below -->
+            <span>
+            <h1 class="float">Our Shades</h1>
+            <div class="top-nav">
+            <ul class="product_single_colors"></ul>
+            </div>
+            </span>
+
+ <!-- adding shades above -->
         </div>
         </div>
 
@@ -54,19 +56,13 @@
 </div>        
             
  <div class="col-6">      
-<h1 id="title">Add your own lipstick to our store!</h1>
-<form class="add-lip-form" action="/submit">
+<h1 id="title">ADD YOUR OWN SHADE!</h1>
+<form class="add-shade-form" action="/submit">
 
     <label for="name"></label>
-    <input placeholder="Lipstick Name" type="text" name="name" id="add-lip-name" required>
-    <label for="price"></label>   
-     <input placeholder="Price" type="text" name="add-price" id="add-price" required>
-     <label for="image"></label>   
-     <input placeholder="Image URL" type="text" name="add-image-url" id="add-image-url" required>
-     <label for="description"></label>   
-     <input placeholder="Description" type="text" name="add-description" id="add-description" required>
-     <label for="webpage"></label>   
-     <input placeholder="Webpage URL" type="text" name="add-webpage-url" id="add-webpage-url" required>
+    <input placeholder="Shade Name" type="text" name="name" id="add-shade-name" required>
+    <label for="color"></label>   
+     <input placeholder="Color Code" type="text" name="add-color" id="add-color" required>
      <input type="submit" value="Add!">
 </form>
 </div> 
